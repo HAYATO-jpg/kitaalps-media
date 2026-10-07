@@ -199,6 +199,8 @@ section{padding:100px 0}
 .f-group input::placeholder,.f-group textarea::placeholder{color:rgba(255,255,255,.28)}
 .f-group input:focus,.f-group textarea:focus{border-color:var(--teal-l);background:rgba(255,255,255,.12)}
 .f-group textarea{resize:vertical;min-height:130px}
+.f-group input,.f-group textarea{width:100%;min-width:0}
+.contact-inner>*{min-width:0}
 .f-submit{width:100%;background:var(--gold);color:#fff;border:none;border-radius:99px;padding:16px;
   font-size:15px;font-weight:500;letter-spacing:.05em;font-family:inherit;cursor:pointer;
   box-shadow:0 4px 20px rgba(196,154,58,.4);transition:background .2s,transform .15s,box-shadow .2s;margin-top:6px}
@@ -225,8 +227,8 @@ footer{background:#17633a;border-top:1px solid rgba(255,255,255,.12);padding:36p
 
 /* MOBILE */
 @media(max-width:900px){
-  .problem-grid,.services-grid,.areas-grid,.about-inner,.contact-inner{grid-template-columns:1fr}
-  .flow-grid{grid-template-columns:1fr}
+  .problem-grid,.services-grid,.areas-grid,.about-inner,.contact-inner{grid-template-columns:minmax(0,1fr)}
+  .flow-grid{grid-template-columns:minmax(0,1fr)}
   html,body{overflow-x:hidden;max-width:100%}
   img,video{max-width:100%}
   .rep-card{position:static}
@@ -259,7 +261,7 @@ footer{background:#17633a;border-top:1px solid rgba(255,255,255,.12);padding:36p
 .mission-text h2{font-family:var(--serif);font-size:clamp(28px,3vw,42px);font-weight:700;color:#1f7a45;line-height:1.4;margin-bottom:24px}
 .mission-text p{font-size:15px;line-height:1.9;color:#444;margin-bottom:16px}
 .mission-text p:last-child{margin-bottom:0}
-@media(max-width:768px){.mission-inner{grid-template-columns:1fr}.mission-photos{grid-template-columns:1fr 1fr}}
+@media(max-width:768px){.mission-inner{grid-template-columns:minmax(0,1fr)}.mission-photos{grid-template-columns:minmax(0,1fr) minmax(0,1fr)}}
 .fv-logo-text{width:min(680px,85vw);height:auto;mix-blend-mode:multiply;display:block;margin-bottom:8px;filter:brightness(1.9) saturate(1.4)}
 .hero-scroll{display:none!important}
 .problem .sec-title{color:#1f7a45!important}.problem-card{color:#333}.problem-card p{color:#555!important}.problem-case{color:var(--teal)!important}
