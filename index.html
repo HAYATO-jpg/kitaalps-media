@@ -61,7 +61,7 @@ ul{list-style:none}
 .hero h1{font-family:"Noto Sans JP","ヒラギノ角ゴ Pro",sans-serif;font-size:clamp(40px,6.5vw,88px);font-weight:900;color:#fff;line-height:1.15;letter-spacing:.06em;text-align:center;text-shadow:0 2px 20px rgba(0,0,0,.25)}
 .hero h1 em{font-style:normal;color:var(--gold-l)}
 .hero-lead{font-family:var(--serif);font-weight:600;font-size:clamp(14px,1.6vw,18px);color:rgba(255,255,255,.92);line-height:2;max-width:780px;margin:0 auto;letter-spacing:.06em;text-shadow:0 1px 12px rgba(0,0,0,.35)}
-.hero-lead span{display:inline-block}
+.hero-lead span{display:inline-block;max-width:100%}
 .hero-actions{display:flex;gap:14px;flex-wrap:wrap;margin-top:6px;justify-content:center}
 .btn-gold{background:var(--gold);color:#fff;padding:14px 32px;border-radius:99px;
   font-size:15px;font-weight:500;letter-spacing:.04em;
@@ -227,6 +227,8 @@ footer{background:#17633a;border-top:1px solid rgba(255,255,255,.12);padding:36p
 @media(max-width:900px){
   .problem-grid,.services-grid,.areas-grid,.about-inner,.contact-inner{grid-template-columns:1fr}
   .flow-grid{grid-template-columns:1fr}
+  html,body{overflow-x:hidden;max-width:100%}
+  img,video{max-width:100%}
   .rep-card{position:static}
   .hero-tags,.nav-links{display:none}
   .hamburger{display:flex}
