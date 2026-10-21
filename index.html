@@ -206,6 +206,11 @@ section{padding:100px 0}
   box-shadow:0 4px 20px rgba(196,154,58,.4);transition:background .2s,transform .15s,box-shadow .2s;margin-top:6px}
 .f-submit:hover{background:var(--gold-l);transform:translateY(-2px);box-shadow:0 8px 28px rgba(196,154,58,.5)}
 .f-submit:disabled{opacity:.5;cursor:not-allowed;transform:none}
+.f-consent{font-size:13px;color:rgba(255,255,255,.85);text-align:center;margin:4px 0 14px;letter-spacing:.03em}
+.f-consent a{color:#fff;text-decoration:underline;text-underline-offset:3px}
+.footer-meta{display:flex;align-items:center;flex-wrap:wrap;gap:8px 20px}
+.footer-link{font-size:12px;color:rgba(255,255,255,.8);text-decoration:underline;text-underline-offset:3px;letter-spacing:.05em}
+.footer-link:hover{color:#fff}
 .f-note{font-size:12px;color:rgba(255,255,255,.38);text-align:center;margin-top:14px;letter-spacing:.03em}
 .f-success{display:none;text-align:center;padding:48px 24px}
 .f-success-icon{width:64px;height:64px;border-radius:50%;background:rgba(42,127,146,.22);
@@ -569,6 +574,7 @@ footer{background:#17633a;border-top:1px solid rgba(255,255,255,.12);padding:36p
             <label for="message">お問い合わせ内容<span>必須</span></label>
             <textarea id="message" name="message" placeholder="SNS運用について相談したい、など" required></textarea>
           </div>
+          <p class="f-consent"><a href="privacy.html" target="_blank" rel="noopener">プライバシーポリシー</a>に同意のうえ、送信してください。</p>
           <button type="submit" class="f-submit" id="submit-btn">この内容で送信する</button>
           <p class="f-note">※いただいた内容は、お問い合わせへの返信目的のみに使用します。</p>
         </form>
@@ -592,7 +598,10 @@ footer{background:#17633a;border-top:1px solid rgba(255,255,255,.12);padding:36p
       <div class="footer-brand">
         <img src="logo_text.webp" alt="北アルプスメディア" class="footer-logo">
       </div>
-      <span class="footer-copy">© 2026 北アルプスメディア / 長野県安曇野市・大町市・白馬村</span>
+      <div class="footer-meta">
+        <a href="privacy.html" class="footer-link">プライバシーポリシー</a>
+        <span class="footer-copy">© 2026 北アルプスメディア / 長野県安曇野市・大町市・白馬村</span>
+      </div>
     </div>
   </div>
 </footer>
