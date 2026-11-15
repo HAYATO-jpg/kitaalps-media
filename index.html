@@ -110,7 +110,9 @@ section{padding:100px 0}
 
 /* SERVICES */
 .services{background:var(--fog)}
-.services-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:24px}
+.services-grid{display:grid;grid-template-columns:repeat(6,minmax(0,1fr));gap:24px}
+.services-grid .svc-card{grid-column:span 2}
+.services-grid .svc-card:nth-child(4){grid-column:2 / span 2}
 .svc-card{background:#fff;border-radius:18px;padding:40px 32px;border:1px solid var(--line);
   display:flex;flex-direction:column;gap:20px;
   transition:box-shadow .3s,transform .3s,border-color .3s}
@@ -233,6 +235,7 @@ footer{background:#17633a;border-top:1px solid rgba(255,255,255,.12);padding:36p
 /* MOBILE */
 @media(max-width:900px){
   .problem-grid,.services-grid,.areas-grid,.about-inner,.contact-inner{grid-template-columns:minmax(0,1fr)}
+  .services-grid .svc-card,.services-grid .svc-card:nth-child(4){grid-column:auto}
   .flow-grid{grid-template-columns:minmax(0,1fr)}
   html,body{overflow-x:hidden;max-width:100%}
   img,video{max-width:100%}
@@ -357,7 +360,7 @@ footer{background:#17633a;border-top:1px solid rgba(255,255,255,.12);padding:36p
     <div class="sec-head-row reveal">
       <div>
         <span class="sec-label">サービス</span>
-        <h2 class="sec-title">3つの柱で、<br>地元の発信を支えます</h2>
+        <h2 class="sec-title">5つのサービスで、<br>地元の発信を支えます</h2>
       </div>
       <p class="sec-desc">作って終わりではなく、運用と保守までを北アルプスメディアが担当します。</p>
     </div>
@@ -414,6 +417,40 @@ footer{background:#17633a;border-top:1px solid rgba(255,255,255,.12);padding:36p
           <li>セキュリティ・不具合対応</li>
           <li>季節ごとの情報差し替え</li>
           <li>電話・対面でのご相談</li>
+        </ul>
+      </div>
+      <div class="svc-card reveal d1">
+        <div class="svc-num">Service 04</div>
+        <div class="svc-icon">
+          <svg viewBox="0 0 28 28" fill="none">
+            <path d="M14 25s8-7.6 8-14a8 8 0 10-16 0c0 6.4 8 14 8 14z" stroke="#fff" stroke-width="1.6" stroke-linejoin="round"/>
+            <circle cx="14" cy="11" r="3" stroke="#fff" stroke-width="1.6"/>
+          </svg>
+        </div>
+        <h3>MEO<br>対策</h3>
+        <p>Googleマップで「地域名＋業種」と検索するお客さまに、お店を見つけてもらうための対策です。</p>
+        <ul class="svc-list">
+          <li>Googleビジネスプロフィールの整備</li>
+          <li>写真・最新情報の投稿代行</li>
+          <li>口コミへの返信サポート</li>
+          <li>表示回数・順位のレポート</li>
+        </ul>
+      </div>
+      <div class="svc-card reveal d2">
+        <div class="svc-num">Service 05</div>
+        <div class="svc-icon">
+          <svg viewBox="0 0 28 28" fill="none">
+            <path d="M5 6h18a2 2 0 012 2v10a2 2 0 01-2 2H12l-5 4v-4H5a2 2 0 01-2-2V8a2 2 0 012-2z" stroke="#fff" stroke-width="1.6" stroke-linejoin="round"/>
+            <path d="M14 9.5l1.1 2.4 2.4 1.1-2.4 1.1L14 16.5l-1.1-2.4-2.4-1.1 2.4-1.1L14 9.5z" fill="#fff"/>
+          </svg>
+        </div>
+        <h3>AIO<br>対策</h3>
+        <p>ChatGPTやGoogleのAI検索で、お店や会社が紹介されやすくなるよう、サイトの情報を整えます。</p>
+        <ul class="svc-list">
+          <li>AIの回答での表示状況の調査</li>
+          <li>サイトの文章・構成の見直し</li>
+          <li>会社・サービス情報の整理</li>
+          <li>よくある質問ページの作成</li>
         </ul>
       </div>
     </div>
