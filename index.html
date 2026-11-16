@@ -61,8 +61,8 @@
         "name": "サービス",
         "itemListElement": [
           {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "SNS運用代行", "description": "Instagramを中心に、戦略設計・企画・台本作成・撮影・動画編集・投稿代行・分析までを一括でサポート。"}},
-          {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "NAGAMAP MEO対策", "description": "Googleビジネスプロフィールの整備・改善、写真や最新情報の投稿、定期レポート。"}, "priceSpecification": {"@type": "UnitPriceSpecification", "price": 29800, "priceCurrency": "JPY", "unitText": "月額（税別）"}},
-          {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "NAGAMAP AI MEO対策", "description": "MEO対策の内容に加え、AI検索対策（情報整備・質問設計）、Instagram連携、口コミのAI返信、国内28媒体への情報掲載（サイテーション対策）、インバウンド対策（AI検索・英語検索向けの情報整備）、AI検索結果を含む定期レポート。"}, "priceSpecification": {"@type": "UnitPriceSpecification", "price": 49800, "priceCurrency": "JPY", "unitText": "月額（税別）"}},
+          {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "NAGAMAP MEO対策", "url": "https://kitaalps-media.jp/nagamap/", "description": "Googleビジネスプロフィールの整備・改善、写真や最新情報の投稿、定期レポート。"}, "priceSpecification": {"@type": "UnitPriceSpecification", "price": 29800, "priceCurrency": "JPY", "unitText": "月額（税別）"}},
+          {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "NAGAMAP AI MEO対策", "url": "https://kitaalps-media.jp/nagamap/", "description": "MEO対策の内容に加え、AI検索対策（情報整備・質問設計）、Instagram連携、口コミのAI返信、国内28媒体への情報掲載（サイテーション対策）、インバウンド対策（AI検索・英語検索向けの情報整備）、AI検索結果を含む定期レポート。"}, "priceSpecification": {"@type": "UnitPriceSpecification", "price": 49800, "priceCurrency": "JPY", "unitText": "月額（税別）"}},
           {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "WEB制作", "description": "ホームページ・LP・採用ページの制作、既存サイトのリニューアル、スマートフォン対応、公開後の保守。"}}
         ]
       }
@@ -307,6 +307,11 @@
   .inbound-body b{color:var(--ink)}
   .price-lead{margin:28px 0 0; font-size:16.5px; color:var(--ink-dim)}
   .price-lead b{color:var(--accent-deep)}
+  .nagamap-cta{margin-top:24px; display:flex; flex-wrap:wrap; align-items:center; justify-content:space-between; gap:14px 24px; padding:22px 28px;
+    background:var(--panel); border:1px solid var(--line); border-radius:18px; box-shadow:0 12px 32px rgba(21,74,38,.07)}
+  .nagamap-cta p{margin:0; font-size:15.5px; color:var(--ink-dim); flex:1 1 320px}
+  .svc-body .nagamap-more{display:flex; width:fit-content; margin-top:16px; min-height:46px; padding:10px 22px; font-size:14px}
+  @media (max-width:820px){ .nagamap-cta{padding:20px} .nagamap-cta .btn{width:100%} .svc-body .nagamap-more{width:100%} }
   @media (max-width:820px){
     .price-grid{grid-template-columns:minmax(0,1fr); gap:34px}
     .price.basic{margin-top:0}
@@ -880,6 +885,7 @@
             <li>定期レポート</li>
           </ul>
           <a class="dm" href="#form" data-topic="【NAGAMAP（MEO・AIO対策）】無料診断・相談を希望します。">無料診断・相談は、お問い合わせフォームから →</a>
+          <a class="btn btn-ghost nagamap-more" href="nagamap/">NAGAMAPの詳しい内容を見る →</a>
         </div>
       </article>
 
@@ -996,6 +1002,10 @@
         </div>
       </div>
       <p class="price-lead">迷ったら <b>AI MEO対策</b> から。特に白馬エリアなど、海外のお客様やAI検索を使う旅行者が多い業種では、AI検索対策の有無が選ばれ方を大きく左右します。</p>
+      <div class="nagamap-cta reveal">
+        <p>NAGAMAPのサービス内容・導入の流れ・よくある質問は、専用ページで詳しくご紹介しています。</p>
+        <a class="btn btn-primary" href="nagamap/">NAGAMAP 専用ページを見る →</a>
+      </div>
       <p class="price-note">※ 価格はすべて税別。契約は6ヶ月単位・自動更新です。実績数値はNAGAMAPの運用実績に基づきます。SNS運用代行・WEB制作の料金は内容により異なるため、無料相談でお見積りをお出しします。</p>
     </div>
   </section>
