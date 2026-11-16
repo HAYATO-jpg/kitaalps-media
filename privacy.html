@@ -13,57 +13,98 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>プライバシーポリシー | 北アルプスメディア</title>
 <meta name="description" content="北アルプスメディアのプライバシーポリシー（個人情報の取り扱いについて）です。">
+<link rel="canonical" href="https://kitaalps-media.jp/privacy.html">
+<link rel="icon" type="image/png" href="images/favicon.png">
+<link rel="apple-touch-icon" href="images/apple-touch-icon.png">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Noto+Serif+JP:wght@600;700&family=Noto+Sans+JP:wght@400;500;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Zen+Kaku+Gothic+New:wght@500;700;900&family=Noto+Sans+JP:wght@400;500;700&display=swap" rel="stylesheet">
 <style>
+:root{
+  --bg:#f4f8ee; --bg2:#e1efdb; --panel:#ffffff; --line:rgba(21,74,38,.16);
+  --ink:#132219; --ink-dim:#3d4c40; --ink-mute:#68755f;
+  --accent:#1da851; --accent-2:#a3e635; --accent-deep:#0a7030; --accent-ink:#05270f;
+}
 *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
 html,body{overflow-x:hidden}
-body{font-family:'Noto Sans JP',system-ui,sans-serif;color:#333;background:#fff;-webkit-font-smoothing:antialiased;line-height:1.9;letter-spacing:.03em}
-a{color:#1f7a45;text-underline-offset:3px}
-.wrap{max-width:800px;margin:0 auto;padding:0 24px}
-.pp-header{border-bottom:1px solid #e2e8ed;background:#fff}
-.pp-header .wrap{max-width:1080px;height:68px;display:flex;align-items:center;justify-content:space-between;gap:16px}
-.pp-logo{display:block;height:64px;width:auto;margin:-18px 0}
-.pp-back{font-size:13px;color:#1f7a45;text-decoration:none;white-space:nowrap}
-.pp-back:hover{text-decoration:underline}
-main{padding:64px 0 96px}
-h1{font-family:'Noto Serif JP',serif;font-size:clamp(26px,4vw,36px);font-weight:700;color:#1f7a45;line-height:1.4;margin-bottom:24px}
-.pp-lead{margin-bottom:48px}
+body{font-family:"Noto Sans JP",system-ui,sans-serif;color:var(--ink);background:var(--bg);-webkit-font-smoothing:antialiased;line-height:1.95;font-size:16px}
+a{color:var(--accent-deep);text-underline-offset:3px}
+.wrap{max-width:1120px;margin:0 auto;padding:0 20px}
+.disp,h1,h2{font-family:"Zen Kaku Gothic New","Noto Sans JP",sans-serif}
+
+/* header (same as top page, solid) */
+header.site{position:sticky;top:0;z-index:50;background:rgba(246,248,240,.92);backdrop-filter:blur(12px);-webkit-backdrop-filter:blur(12px);border-bottom:1px solid var(--line)}
+.nav{display:flex;align-items:center;gap:16px;height:64px}
+.brand{display:flex;flex-direction:column;gap:2px;text-decoration:none;line-height:1.15}
+.brand .logo-kam{height:40px;width:auto;display:block}
+.brand .logo-sub{font-size:9px;letter-spacing:.34em;color:var(--ink-mute);font-weight:700;padding-left:2px}
+.back{margin-left:auto;display:inline-flex;align-items:center;gap:6px;min-height:44px;padding:0 18px;border-radius:999px;
+  border:1px solid rgba(10,112,48,.4);background:rgba(255,255,255,.6);color:var(--ink);font-size:14px;font-weight:700;text-decoration:none;white-space:nowrap;transition:background .25s ease,transform .25s ease}
+.back:hover{background:#fff;transform:translateY(-2px)}
+
+/* page head */
+.page-head{padding-top:72px;padding-bottom:40px}
+.page-head .no{font-family:"Zen Kaku Gothic New",sans-serif;font-weight:900;color:var(--accent-deep);font-size:14px;letter-spacing:.3em;margin:0 0 10px}
+.page-head h1{font-size:clamp(30px,5vw,44px);font-weight:900;line-height:1.4}
+.page-head h1 span{background-image:linear-gradient(transparent 62%,rgba(53,224,101,.35) 62%,rgba(53,224,101,.35) 94%,transparent 94%)}
+
+/* body panel */
+main{padding-bottom:96px}
+.panel{max-width:860px;background:var(--panel);border:1px solid var(--line);border-radius:20px;padding:48px 52px;box-shadow:0 12px 32px rgba(21,74,38,.07)}
+.pp-lead{color:var(--ink-dim);margin-bottom:40px}
 section{margin-bottom:40px}
-h2{font-family:'Noto Serif JP',serif;font-size:19px;font-weight:700;color:#1f7a45;line-height:1.5;padding-left:14px;border-left:4px solid #2f9e5a;margin-bottom:14px}
-p,li{font-size:15px;overflow-wrap:anywhere}
+h2{font-size:20px;font-weight:900;line-height:1.5;margin-bottom:14px;display:flex;align-items:center;gap:12px}
+h2::before{content:"";flex:none;width:10px;height:10px;border-radius:3px;background:linear-gradient(115deg,var(--accent),var(--accent-2))}
+p,li{font-size:15.5px;color:var(--ink-dim);overflow-wrap:anywhere}
 p+p,p+ul,ul+p{margin-top:10px}
-ul{padding-left:1.4em}
-li+li{margin-top:4px}
-.pp-info{display:grid;grid-template-columns:auto minmax(0,1fr);gap:8px 20px;font-size:15px;background:#f6f8fa;border-radius:12px;padding:20px 24px}
-.pp-info dt{color:#1f7a45;font-weight:500;white-space:nowrap}
-.pp-info dd{overflow-wrap:anywhere}
-.pp-date{margin-top:56px;text-align:right;color:#666;font-size:14px}
-footer{background:#17633a;padding:36px 0}
-footer .wrap{max-width:1080px;display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:16px}
-.footer-logo{height:64px;width:auto;margin:-18px 0;display:block;filter:grayscale(1) invert(1) contrast(3);mix-blend-mode:screen}
-.footer-copy{font-size:12px;color:rgba(255,255,255,.6);letter-spacing:.05em}
-@media(max-width:600px){
-  main{padding:44px 0 72px}
-  .pp-info{grid-template-columns:minmax(0,1fr);gap:2px;padding:18px 20px}
-  .pp-info dd{margin-bottom:10px}
-  .pp-info dd:last-child{margin-bottom:0}
+ul{list-style:none;padding:0}
+li{position:relative;padding-left:18px}
+li::before{content:"";position:absolute;left:0;top:.75em;width:7px;height:7px;border-radius:2px;background:var(--accent)}
+li+li{margin-top:6px}
+.pp-info{display:grid;grid-template-columns:auto minmax(0,1fr);gap:0;font-size:15px;border-top:1px solid var(--line)}
+.pp-info dt,.pp-info dd{padding:13px 4px;border-bottom:1px solid var(--line)}
+.pp-info dt{color:var(--ink-mute);font-weight:500;white-space:nowrap;padding-right:28px}
+.pp-info dd{color:var(--ink);overflow-wrap:anywhere}
+.pp-date{margin-top:48px;text-align:right;color:var(--ink-mute);font-size:14px}
+
+/* footer (same as top page) */
+footer.site{border-top:1px solid var(--line);padding:36px 0 44px;background:var(--bg2)}
+footer.site .row{display:flex;flex-wrap:wrap;gap:14px 28px;align-items:center;justify-content:space-between}
+footer.site .logo-kam{height:92px;width:auto;display:block}
+footer.site small{color:var(--ink-mute);font-size:12.5px}
+footer.site nav a{color:var(--ink-dim);font-size:13.5px;text-decoration:none;padding:8px 4px;display:inline-block}
+footer.site nav a:hover{color:var(--ink)}
+footer.site a.f-insta{display:inline-flex;align-items:center;gap:6px}
+
+@media (max-width:820px){
+  .wrap{padding:0 18px}
+  .brand .logo-kam{height:34px}
+  .back{padding:0 14px;font-size:13px}
+  .page-head{padding-top:48px;padding-bottom:28px}
+  .panel{padding:30px 22px;border-radius:16px}
+  .pp-info{grid-template-columns:minmax(0,1fr)}
+  .pp-info dt{padding:12px 4px 0;border-bottom:none}
+  .pp-info dd{padding:2px 4px 12px}
+  footer.site .logo-kam{height:64px}
 }
 </style>
 </head>
 <body>
 
-<header class="pp-header">
-  <div class="wrap">
-    <a href="./"><img src="logo_text.webp" alt="北アルプスメディア" class="pp-logo"></a>
-    <a href="./" class="pp-back">← トップページへ戻る</a>
+<header class="site">
+  <div class="wrap nav">
+    <a class="brand" href="./" aria-label="北アルプスメディア トップへ"><img class="logo-kam" src="images/logo-kam.png" alt="北アルプスメディア（KAM）ロゴ"><span class="logo-sub">KITA ALPS MEDIA</span></a>
+    <a href="./" class="back">← トップページへ戻る</a>
   </div>
 </header>
 
 <main>
+  <div class="wrap page-head">
+    <p class="no">PRIVACY POLICY</p>
+    <h1><span>プライバシーポリシー</span></h1>
+  </div>
   <div class="wrap">
-    <h1>プライバシーポリシー</h1>
+   <div class="panel">
     <p class="pp-lead">北アルプスメディア（以下「当事業者」といいます）は、本ウェブサイト（https://kitaalps-media.jp/）でお預かりするお客様の個人情報を、以下の方針に基づき適切に取り扱います。</p>
 
     <section>
@@ -139,13 +180,24 @@ footer .wrap{max-width:1080px;display:flex;justify-content:space-between;align-i
     </section>
 
     <p class="pp-date">制定日：2026年10月21日</p>
+   </div>
   </div>
 </main>
 
-<footer>
+<footer class="site">
   <div class="wrap">
-    <img src="logo_text.webp" alt="北アルプスメディア" class="footer-logo">
-    <span class="footer-copy">© 2026 北アルプスメディア</span>
+    <div class="row">
+      <a href="./" aria-label="北アルプスメディア トップへ"><img class="logo-kam" src="images/logo-kam.png" alt="北アルプスメディア（KAM）ロゴ" loading="lazy"></a>
+      <nav>
+        <a href="./#services">サービス</a>
+        <a href="./#price">料金</a>
+        <a href="./#about">私たちについて</a>
+        <a href="./#contact">お問い合わせ</a>
+        <a href="privacy.html">プライバシーポリシー</a>
+        <a class="f-insta" href="https://www.instagram.com/yoshiki_sns.nagano/" target="_blank" rel="noopener" aria-label="Instagram（@yoshiki_sns.nagano）"><svg viewBox="0 0 24 24" width="18" height="18" fill="none" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="5" stroke="currentColor" stroke-width="1.8"/><circle cx="12" cy="12" r="4.2" stroke="currentColor" stroke-width="1.8"/><circle cx="17.4" cy="6.6" r="1.2" fill="currentColor"/></svg>Instagram</a>
+      </nav>
+    </div>
+    <p style="margin:18px 0 0"><small>© 2026 北アルプスメディア｜長野県大町市八坂｜info@kitaalps-media.jp</small></p>
   </div>
 </footer>
 
