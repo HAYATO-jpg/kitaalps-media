@@ -248,11 +248,10 @@ section[id],.form-box{scroll-margin-top:80px;}
 .hero-note{font-size:13px;color:var(--muted);margin:-40px 0 56px;letter-spacing:.03em;}
 @media(max-width:560px){.hero-note{margin-top:-30px;margin-bottom:44px;}}
 /* メインビジュアル：白フチ＋影で写真を重ねる、編集コラージュ風レイアウト */
-.hero-visual{display:grid;grid-template-columns:1fr 1fr;gap:10px;}
+.hero-visual{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:8px;}
 .hero-visual figure{
 margin:0;overflow:hidden;position:relative;background:var(--gray);
-border:4px solid #fff;border-radius:3px;
-box-shadow:0 12px 28px rgba(23,25,27,.14);
+border-radius:3px;
 }
 .hero-visual img{width:100%;height:100%;object-fit:cover;filter:saturate(.9) contrast(1.03) brightness(1.01) sepia(.06);transition:transform .6s ease;}
 .hv-cap{
@@ -263,24 +262,24 @@ font-family:var(--font-en);font-size:10px;font-weight:700;letter-spacing:.18em;
 padding:6px 10px;border-radius:2px;line-height:1;
 }
 .hv-cap::before{content:"";width:6px;height:6px;background:var(--green);flex:none;}
-/* モバイル：メインを大きく、2枚目を重ね、3枚目をずらして配置 */
-.hv-shoot{grid-column:1/3;grid-row:1;aspect-ratio:4/5;z-index:1;}
+/* モバイル：撮影写真を大きく → 2枚を横並び → 横長1枚（重ねずに等間隔） */
+.hv-shoot{grid-column:1/3;grid-row:1;aspect-ratio:4/5;}
 .hv-shoot img{object-position:50% 30%;}
-.hv-sky{grid-column:1;grid-row:2;aspect-ratio:3/4;margin-top:-34px;z-index:3;}
+.hv-sky{grid-column:1;grid-row:2;aspect-ratio:3/4;}
 .hv-sky img{object-position:50% 62%;}
-.hv-meeting{grid-column:2;grid-row:2;aspect-ratio:3/4;margin-top:16px;z-index:2;}
+.hv-meeting{grid-column:2;grid-row:2;aspect-ratio:3/4;}
 .hv-meeting img{object-position:50% 30%;}
-.hv-location{grid-column:1/3;grid-row:3;aspect-ratio:16/10;z-index:1;}
+.hv-location{grid-column:1/3;grid-row:3;aspect-ratio:16/10;}
 .hv-location img{object-position:50% 45%;}
 @media(min-width:820px){
-/* PC：12カラムグリッドで写真同士を少し重ねる非対称コラージュ */
-.hero-visual{grid-template-columns:repeat(12,1fr);grid-template-rows:repeat(12,1fr);gap:0;aspect-ratio:1.9/1;}
-.hero-visual figure{aspect-ratio:auto;border-width:6px;box-shadow:0 16px 36px rgba(23,25,27,.15);}
-.hv-shoot{grid-column:1/6;grid-row:1/13;margin-right:-16px;z-index:4;}
-.hv-sky{grid-column:6/10;grid-row:1/8;z-index:2;}
+/* PC：左に撮影写真、右上に2枚、右下に横長1枚。すき間はすべて12px */
+.hero-visual{grid-template-columns:minmax(0,5fr) minmax(0,4fr) minmax(0,3fr);grid-template-rows:1fr 1fr;gap:12px;aspect-ratio:1.9/1;}
+.hero-visual figure{aspect-ratio:auto;}
+.hv-shoot{grid-column:1;grid-row:1/3;}
+.hv-sky{grid-column:2;grid-row:1;}
 .hv-sky img{object-position:68% 55%;}
-.hv-meeting{grid-column:10/13;grid-row:1/9;z-index:3;}
-.hv-location{grid-column:6/13;grid-row:8/13;margin-top:-14px;z-index:1;}
+.hv-meeting{grid-column:3;grid-row:1;}
+.hv-location{grid-column:2/4;grid-row:2;}
 .hv-location img{object-position:50% 42%;}
 .hv-cap{left:12px;bottom:12px;font-size:10.5px;padding:7px 11px;}
 .hero-visual figure:hover img{transform:scale(1.03);}
@@ -365,8 +364,11 @@ background:rgba(23,25,27,.82);color:#fff;font-family:var(--font-en);
 font-size:10.5px;font-weight:700;letter-spacing:.18em;padding:7px 12px;border-radius:99px;
 }
 .work-thumb .reel-chip svg{width:9px;height:10px;flex:none;}
-.work-body{padding:24px 24px 26px;}
-.work-cat{font-family:var(--font-en);font-size:11px;font-weight:700;letter-spacing:.18em;color:var(--green);margin:0 0 10px;}
+.work-card{display:flex;flex-direction:column;}
+.work-body{display:flex;flex-direction:column;flex:1;padding:24px 28px 28px;}
+@media(max-width:560px){.work-body{padding:22px 20px 24px;}}
+.work-body .work-more{margin-top:auto;padding-top:4px;}
+.work-cat{font-family:var(--font-en);font-size:11px;font-weight:700;letter-spacing:.18em;line-height:1.6;color:var(--green);margin:0 0 10px;}
 .work-name{font-size:22px;font-weight:900;margin:0 0 6px;line-height:1.4;}
 .work-ind{font-size:13px;color:var(--muted);margin:0 0 14px;}
 .work-desc{font-size:14.5px;color:var(--ink-soft);margin:0 0 18px;}
